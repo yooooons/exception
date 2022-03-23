@@ -28,6 +28,10 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     @Override
+
+    /**
+     *api exception resolver 등록
+     */
     public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
         resolvers.add(new MyHandlerExceptionResolver());
         resolvers.add(new UserHandlerExceptionResolver());
